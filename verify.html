@@ -1,0 +1,46 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!-- uploaded 2026-09-20 02:19 by svc_backup -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account Verification - Makani Country Portal</title>
+<link rel="stylesheet" href="assets/css/public.css">
+</head>
+<body>
+<header class="verify-head">
+  <div class="wrap">
+    <span class="seal seal--grey">MG</span>
+    <span class="brand__name"><strong>Makani Country Public Works</strong><small>Secure Account Verification Center</small></span>
+  </div>
+</header>
+
+<section class="verify-section">
+  <div class="verify-wrap">
+    <div class="notice notice--bad notice--lead">Your water account is scheduled for disconnection. Verify now to keep your service.</div>
+    <div class="card-plain">
+      <h1>Verify your account</h1>
+      <p>All customers must complete verification within 24 hours. This is manditory.</p>
+      <div id="verify-result" class="notice" hidden></div>
+      <form id="verify-form" class="form">
+        <div><label for="v-acct">Account number</label><input id="v-acct" type="text"></div>
+        <div><label for="v-pass">Online password</label><input id="v-pass" type="password"></div>
+        <div><label for="v-zip">Billing ZIP code</label><input id="v-zip" type="text"></div>
+        <button class="btn btn--danger btn--block" type="submit">Verify now</button>
+      </form>
+      <p class="fine">Questions? Call 808-555-0199 (24 hours).</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__line">Makani Country Public Works</div>
+    <div class="footer__note">Training site. Not a real organization.</div>
+  </div>
+</footer>
+
+<script src="assets/js/verify.js"></script>
+</body>
+</html>

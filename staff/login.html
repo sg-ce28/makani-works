@@ -1,0 +1,34 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff sign-in · Makani County Public Works Portal</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="auth">
+<main class="auth__card">
+  <div class="auth__brand">
+    <span class="seal">MC</span>
+    <div><strong>Public Works Portal</strong><small>Staff console · Makani County</small></div>
+  </div>
+
+  <div class="alert alert--warn"><strong>Incident mode.</strong> The portal is read-only. Only the incident responder account is enabled. Other staff: do not sign in until IT says so.</div>
+
+  <div id="login-error" class="alert alert--bad" hidden></div>
+
+  <form id="login-form">
+    <div class="field"><label for="username">Username</label><input id="username" type="text" autocomplete="username" required></div>
+    <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><div class="hint">The responder account details are in your README.</div></div>
+    <button class="btn btn--block" type="submit">Sign in</button>
+  </form>
+
+  <p class="hint" style="margin-top:1rem"><a href="../index.html">Back to the public site</a></p>
+  <p class="mock-note" style="margin-top:1.5rem;color:#5d6b7a">Training site. Not a real organization.</p>
+</main>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mailbox · Staff console · Makani County</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="console"><div class="wrap">
+  <a class="console__brand" href="dashboard.html"><span class="seal">MC</span>Public Works Portal <small>· staff console</small></a>
+  <div class="console__user"><span id="who">Not signed in</span> · <a href="#" id="logout">Sign out</a></div>
+</div></header>
+<div class="incident"><div class="wrap"><span class="pill">Incident IR-2026-014</span><span>Investigating: public site content altered overnight. Opened 06:36 by Esther Kim (IT). Portal is in read-only mode.</span></div></div>
+<nav class="tabs"><div class="wrap">
+  <a href="dashboard.html">Overview</a><a href="audit.html">Audit log</a><a href="users.html">Accounts</a><a href="revisions.html">Revisions</a><a href="mailbox.html">Mailbox</a><a href="tasks.html">Tasks &amp; uploads</a><a href="controls.html">Plant controls</a><a href="respond.html">Response plan</a>
+</div></nav>
+
+<main class="main"><div class="wrap">
+  <div class="pagehead">
+    <div><div class="crumb">Staff console · Mailbox export</div><h1>Mailbox: nkahale@makanicounty.example</h1></div>
+    <span class="muted">September 19 and 20 · exported by IT for the incident</span>
+  </div>
+
+  <div class="alert alert--info">Read-only export. Links inside messages are shown as text so nothing can be opened by accident.</div>
+
+  <div class="card">
+    <div class="mail">
+      <ul class="mail__list" id="mail-list"></ul>
+      <div>
+        <p class="muted" id="mail-empty">Select a message to read it.</p>
+        <div id="mail-view" hidden></div>
+      </div>
+    </div>
+  </div>
+</div></main>
+
+<footer class="footer"><div class="wrap"><div>Makani County Public Works Portal · staff console</div><div class="mock-note">Training site. Not a real organization.</div></div></footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/mailbox.js"></script>
+</body>
+</html>

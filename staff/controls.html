@@ -1,0 +1,49 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plant controls · Staff console · Makani County</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="console"><div class="wrap">
+  <a class="console__brand" href="dashboard.html"><span class="seal">MC</span>Public Works Portal <small>· staff console</small></a>
+  <div class="console__user"><span id="who">Not signed in</span> · <a href="#" id="logout">Sign out</a></div>
+</div></header>
+<div class="incident"><div class="wrap"><span class="pill">Incident IR-2026-014</span><span>Investigating: public site content altered overnight. Opened 06:36 by Esther Kim (IT). Portal is in read-only mode.</span></div></div>
+<nav class="tabs"><div class="wrap">
+  <a href="dashboard.html">Overview</a><a href="audit.html">Audit log</a><a href="users.html">Accounts</a><a href="revisions.html">Revisions</a><a href="mailbox.html">Mailbox</a><a href="tasks.html">Tasks &amp; uploads</a><a href="controls.html">Plant controls</a><a href="respond.html">Response plan</a>
+</div></nav>
+
+<main class="main"><div class="wrap">
+  <div class="pagehead">
+    <div><div class="crumb">Staff console · Plant controls</div><h1>Treatment plant controls</h1></div>
+  </div>
+
+  <div class="card denied-box">
+    <div class="lock">&#128274;</div>
+    <h2>Access denied</h2>
+    <p>Plant controls require the <strong>operator</strong> role and a multi-factor authentication device enrolled with IT. Your account (<span id="who-inline">responder</span>) has neither.</p>
+    <p class="hint">This is expected. The control system runs separately from the portal and you only need its access record.</p>
+  </div>
+
+  <div class="card">
+    <div class="card__head"><h2>Control system access record</h2><small>Kept by the control system, not by the portal</small></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Time (HST)</th><th>User</th><th>From</th><th>Result</th></tr></thead>
+        <tbody id="controls-body"></tbody>
+      </table>
+    </div>
+    <p class="hint">Last successful session: <code>plant_ops</code> from the plant console at 22:01 on September 19. No settings have changed since the September 15 maintenance window.</p>
+  </div>
+</div></main>
+
+<footer class="footer"><div class="wrap"><div>Makani County Public Works Portal · staff console</div><div class="mock-note">Training site. Not a real organization.</div></div></footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/tables.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview · Staff console · Makani County</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="console"><div class="wrap">
+  <a class="console__brand" href="dashboard.html"><span class="seal">MC</span>Public Works Portal <small>· staff console</small></a>
+  <div class="console__user"><span id="who">Not signed in</span> · <a href="#" id="logout">Sign out</a></div>
+</div></header>
+<div class="incident"><div class="wrap"><span class="pill">Incident IR-2026-014</span><span>Investigating: public site content altered overnight. Opened 06:36 by Esther Kim (IT). Portal is in read-only mode.</span></div></div>
+<nav class="tabs"><div class="wrap">
+  <a href="dashboard.html">Overview</a><a href="audit.html">Audit log</a><a href="users.html">Accounts</a><a href="revisions.html">Revisions</a><a href="mailbox.html">Mailbox</a><a href="tasks.html">Tasks &amp; uploads</a><a href="controls.html">Plant controls</a><a href="respond.html">Response plan</a>
+</div></nav>
+
+<main class="main"><div class="wrap">
+  <div class="pagehead">
+    <div><div class="crumb">Staff console · Overview</div><h1>What happened overnight?</h1></div>
+    <span class="badge badge--bad">Status: investigating</span>
+  </div>
+
+  <div class="grid grid--4" style="margin-bottom:1rem">
+    <a class="card stat" href="revisions.html"><div class="stat__label">Content changes since 2:00 AM</div><div class="stat__value bad" id="n-revisions">–</div><div class="stat__foot">Compare each one</div></a>
+    <a class="card stat" href="users.html"><div class="stat__label">Accounts created since 2:00 AM</div><div class="stat__value bad" id="n-accounts">–</div><div class="stat__foot">One of them is yours</div></a>
+    <a class="card stat" href="tasks.html"><div class="stat__label">New scheduled tasks</div><div class="stat__value bad" id="n-tasks">–</div><div class="stat__foot">Check what they do</div></a>
+    <a class="card stat" href="audit.html"><div class="stat__label">Failed or denied actions</div><div class="stat__value bad" id="n-denied">–</div><div class="stat__foot">Since 2:00 AM</div></a>
+  </div>
+
+  <div class="grid grid--2">
+    <div class="card">
+      <div class="card__head"><h2>Notes from IT (Esther Kim, 06:40)</h2></div>
+      <p>At 06:10 the overnight answering service opened ticket #4471: a resident says our home page shows a red banner telling them their water will be shut off unless they call a number and give a card. That is not something we published.</p>
+      <p>I have put the portal in read-only mode, left everything exactly as it is, and created a read-only responder account for you. <strong>Nothing has been cleaned up yet.</strong></p>
+      <p>What I need from you, in writing:</p>
+      <ol>
+        <li>A timeline of what happened, with times and the account involved at each step.</li>
+        <li>How the attacker first got in.</li>
+        <li>Everything they changed, added, or took, and what they tried but could not do.</li>
+        <li>Indicators we should watch for (addresses, accounts, file names).</li>
+        <li>A response plan: what to shut off, what to restore, who to tell.</li>
+      </ol>
+      <p class="hint">The treatment plant is on its own control system and its console is unchanged. Confirm that.</p>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="card__head"><h2>Evidence available to you</h2></div>
+        <ul>
+          <li><a href="audit.html">Audit log</a>: every action the portal recorded (<span id="n-events">–</span> events in the last 48 hours).</li>
+          <li><a href="users.html">Accounts</a>: who has access, roles, MFA, last sign-in.</li>
+          <li><a href="revisions.html">Revisions</a>: before and after text of every content change.</li>
+          <li><a href="mailbox.html">Mailbox</a>: Noelani Kahale's mailbox export for September 19 and 20 (provided by IT under county policy).</li>
+          <li><a href="tasks.html">Tasks &amp; uploads</a>: scheduled jobs and files added to the site (<span id="n-uploads">–</span> upload since 2:00 AM).</li>
+          <li><a href="controls.html">Plant controls</a>: the control system's own access record.</li>
+          <li>Raw server logs: <a href="../logs/access-log-2026-09-20.txt">web access log</a> and <a href="../logs/auth-log-2026-09-20.txt">authentication log</a>.</li>
+          <li>The <a href="../index.html">public site</a> as residents currently see it.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__head"><h2>County network reference</h2></div>
+        <p class="hint">County offices and the treatment plant use addresses starting <code>198.51.100.</code> The portal server itself is <code>127.0.0.1</code> in the log. Anything else is outside the county.</p>
+      </div>
+    </div>
+  </div>
+</div></main>
+
+<footer class="footer"><div class="wrap"><div>Makani County Public Works Portal · staff console</div><div class="mock-note">Training site. Not a real organization.</div></div></footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/tables.js"></script>
+</body>
+</html>

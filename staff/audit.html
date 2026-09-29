@@ -1,0 +1,49 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audit log · Staff console · Makani County</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="console"><div class="wrap">
+  <a class="console__brand" href="dashboard.html"><span class="seal">MC</span>Public Works Portal <small>· staff console</small></a>
+  <div class="console__user"><span id="who">Not signed in</span> · <a href="#" id="logout">Sign out</a></div>
+</div></header>
+<div class="incident"><div class="wrap"><span class="pill">Incident IR-2026-014</span><span>Investigating: public site content altered overnight. Opened 06:36 by Esther Kim (IT). Portal is in read-only mode.</span></div></div>
+<nav class="tabs"><div class="wrap">
+  <a href="dashboard.html">Overview</a><a href="audit.html">Audit log</a><a href="users.html">Accounts</a><a href="revisions.html">Revisions</a><a href="mailbox.html">Mailbox</a><a href="tasks.html">Tasks &amp; uploads</a><a href="controls.html">Plant controls</a><a href="respond.html">Response plan</a>
+</div></nav>
+
+<main class="main"><div class="wrap">
+  <div class="pagehead">
+    <div><div class="crumb">Staff console · Audit log</div><h1>Audit log</h1></div>
+    <span class="muted" id="audit-count"></span>
+  </div>
+
+  <div class="card">
+    <div class="filters">
+      <div class="field"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="user, address, action, text"></div>
+      <div class="field"><label for="f-user">User</label><select id="f-user"><option value="">All users</option></select></div>
+      <label class="check"><input id="f-fail" type="checkbox"> Failed or denied only</label>
+      <label class="check"><input id="f-outside" type="checkbox"> Outside the county network only</label>
+      <button class="btn btn--ghost btn--sm" type="button" id="f-clear">Clear</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Time (HST)</th><th>User</th><th>From</th><th>Action</th><th>Detail</th><th>Result</th></tr></thead>
+        <tbody id="audit-body"></tbody>
+      </table>
+    </div>
+    <p class="hint">Times are Hawaii Standard Time. County addresses start <code>198.51.100.</code>; <code>127.0.0.1</code> is the portal server running its own scheduled tasks.</p>
+  </div>
+</div></main>
+
+<footer class="footer"><div class="wrap"><div>Makani County Public Works Portal · staff console</div><div class="mock-note">Training site. Not a real organization.</div></div></footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/audit.js"></script>
+</body>
+</html>

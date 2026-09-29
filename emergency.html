@@ -1,0 +1,84 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emergency contacts · Makani County Public Works</title>
+<link rel="stylesheet" href="assets/css/public.css">
+</head>
+<body>
+<div class="utility"><div class="wrap"><span>Makani County, Hawaiʻi · Department of Public Works</span><a href="staff/login.html">Staff sign-in <span>&rarr;</span></a></div></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="seal">MC</span>
+      <span class="brand__name"><strong>Makani County Public Works</strong><small>Water · Roads · Emergency information</small></span>
+    </a>
+    <nav class="pubnav">
+      <a href="index.html">Home</a>
+      <a href="water.html">Water service</a>
+      <a href="emergency.html" class="is-active">Emergency contacts</a>
+      <a href="billing.html">Pay your bill</a>
+    </nav>
+  </div>
+</header>
+
+<section class="pagehead">
+  <div class="wrap">
+    <div class="eyebrow eyebrow--red"><span class="eyebrow__rule"></span>Emergency contacts</div>
+    <h1>Emergency contacts</h1>
+    <p class="lede">For a life-threatening emergency call <strong>911</strong>. For county services use the numbers below.</p>
+  </div>
+</section>
+
+<section class="body-section">
+  <div class="wrap">
+    <div class="col-main">
+      <div class="panel panel--motion" style="--d:.1s">
+        <div class="panel__head"><h2>Water</h2><span class="panel__meta">Updated September 20</span></div>
+        <ul class="contact-list">
+          <li><span>Water emergencies, 24 hours</span><strong>808-555-0199</strong></li>
+          <li><span>Main break or no water</span><strong>808-555-0199</strong></li>
+          <li><span>Water quality questions (weekdays)</span><strong>808-555-0150</strong></li>
+          <li><span>Billing questions (weekdays)</span><strong>808-555-0160</strong></li>
+        </ul>
+      </div>
+      <div class="panel panel--motion" style="--d:.18s">
+        <h2>Roads and drainage</h2>
+        <ul class="contact-list">
+          <li><span>Road hazards, flooding, fallen trees</span><strong>808-555-0170</strong></li>
+          <li><span>Traffic signals</span><strong>808-555-0171</strong></li>
+          <li><span>After-hours answering service</span><strong>808-555-0100</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel report panel--motion" id="report" style="--d:.26s">
+      <div class="eyebrow eyebrow--dark"><span class="eyebrow__rule"></span>Report a problem</div>
+      <h2>Tell us what you found</h2>
+      <div id="report-result" class="notice" hidden></div>
+      <form id="report-form" class="form">
+        <div><label for="r-name">Your name</label><input id="r-name" type="text"></div>
+        <div><label for="r-addr">Location or address</label><input id="r-addr" type="text"></div>
+        <div><label for="r-type">Problem</label>
+          <select id="r-type"><option>Water leak</option><option>No water or low pressure</option><option>Pothole</option><option>Flooding</option><option>Other</option></select>
+        </div>
+        <div><label for="r-desc">Details</label><textarea id="r-desc" rows="3"></textarea></div>
+        <button class="btn" type="submit">Send report <span class="arrow">&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__brand"><span class="seal seal--sm">MC</span><div class="footer__line">Makani County Department of Public Works · 100 Civic Center Drive, Makani, HI (fictional) · 808-555-0100</div></div>
+    <div class="footer__note">Training site. Not a real organization.</div>
+  </div>
+</footer>
+
+<script src="assets/js/public.js"></script>
+</body>
+</html>

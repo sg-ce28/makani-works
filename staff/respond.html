@@ -1,0 +1,60 @@
+<!-- MOCK SITE FOR TRAINING. Not a real organization. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Response plan · Staff console · Makani County</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="console"><div class="wrap">
+  <a class="console__brand" href="dashboard.html"><span class="seal">MC</span>Public Works Portal <small>· staff console</small></a>
+  <div class="console__user"><span id="who">Not signed in</span> · <a href="#" id="logout">Sign out</a></div>
+</div></header>
+<div class="incident"><div class="wrap"><span class="pill">Incident IR-2026-014</span><span>Investigating: public site content altered overnight. Opened 06:36 by Esther Kim (IT). Portal is in read-only mode.</span></div></div>
+<nav class="tabs"><div class="wrap">
+  <a href="dashboard.html">Overview</a><a href="audit.html">Audit log</a><a href="users.html">Accounts</a><a href="revisions.html">Revisions</a><a href="mailbox.html">Mailbox</a><a href="tasks.html">Tasks &amp; uploads</a><a href="controls.html">Plant controls</a><a href="respond.html">Response plan</a>
+</div></nav>
+
+<main class="main"><div class="wrap">
+  <div class="pagehead">
+    <div><div class="crumb">Staff console · Response plan</div><h1>Build the response plan</h1></div>
+  </div>
+
+  <div class="grid grid--2">
+    <div class="card">
+      <p>Tick every action you recommend. Your plan should stop the attacker, undo what they did, protect residents, and keep the evidence. Some options would make things worse.</p>
+      <form id="plan-form">
+        <div class="field"><label for="plan-name">Responder name</label><input id="plan-name" type="text" placeholder="Your name"></div>
+        <div id="plan-list"></div>
+        <button class="btn" type="submit" style="margin-top:1rem">Check my plan</button>
+      </form>
+    </div>
+    <div>
+      <div class="card">
+        <div class="card__head"><h2>Result</h2></div>
+        <p class="muted" id="plan-empty">Submit a plan to see whether every foothold is covered.</p>
+        <div id="plan-result" class="alert" hidden></div>
+        <pre class="plan-summary" id="plan-summary" hidden></pre>
+      </div>
+      <div class="card">
+        <div class="card__head"><h2>Order of operations</h2></div>
+        <ol>
+          <li><strong>Preserve</strong> evidence before touching anything.</li>
+          <li><strong>Contain</strong>: cut off the attacker's access and stop anything they left running.</li>
+          <li><strong>Recover</strong>: put the public site back the way it should be.</li>
+          <li><strong>Communicate</strong>: residents, staff, and whoever the law says must be told.</li>
+          <li><strong>Harden</strong>: make the same trick fail next time.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div></main>
+
+<footer class="footer"><div class="wrap"><div>Makani County Public Works Portal · staff console</div><div class="mock-note">Training site. Not a real organization.</div></div></footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/respond.js"></script>
+</body>
+</html>

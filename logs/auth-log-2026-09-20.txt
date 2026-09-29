@@ -1,0 +1,16 @@
+# Makani County Public Works portal - authentication log (HST)
+# Training site: every address and account below is fictional.
+2026-09-19 15:10:04 LOGIN OK      user=rtorres    ip=198.51.100.41 device=known mfa=none
+2026-09-19 16:55:48 LOGIN OK      user=nkahale    ip=198.51.100.23 device=known mfa=none
+2026-09-19 22:00:15 LOGIN OK      user=plant_ops  ip=198.51.100.77 device=known mfa=verified
+2026-09-20 01:58:19 LOGIN FAILED  user=admin      ip=203.0.113.57  reason=unknown-username
+2026-09-20 02:00:03 LOGIN FAILED  user=admin      ip=203.0.113.57  reason=unknown-username
+2026-09-20 02:02:41 LOGIN FAILED  user=administrator ip=203.0.113.57 reason=unknown-username
+2026-09-20 02:03:11 LOGIN OK      user=nkahale    ip=203.0.113.57  device=NEW   mfa=none  note=flag{unusual-ip-unusual-hour}
+2026-09-20 02:08:40 LOGOUT        user=nkahale    ip=203.0.113.57
+2026-09-20 02:09:05 LOGIN OK      user=svc_backup ip=203.0.113.57  device=NEW   mfa=none  note=first-login-for-account
+2026-09-20 02:34:12 MFA REQUIRED  user=svc_backup ip=203.0.113.57  resource=plant-controls result=denied
+2026-09-20 02:35:01 MFA REQUIRED  user=svc_backup ip=203.0.113.57  resource=plant-controls result=denied
+2026-09-20 02:36:27 MFA REQUIRED  user=svc_backup ip=203.0.113.57  resource=plant-controls result=denied
+2026-09-20 02:40:14 LOGOUT        user=svc_backup ip=203.0.113.57
+2026-09-20 06:32:08 LOGIN OK      user=ekim       ip=198.51.100.12 device=known mfa=verified
