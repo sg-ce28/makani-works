@@ -53,7 +53,7 @@
     if (missing === 0 && harmful === 0) {
       cls = 'alert--ok';
       msg = 'Solid plan. Every foothold the attacker created is closed and nothing in the plan would hurt residents or destroy evidence. ' +
-            'flag{contain-then-recover}' + (good < 4 ? ' Consider whether recovery and communication steps are complete.' : '');
+            'FLAG{contain-then-recover}' + (good < 4 ? ' Consider whether recovery and communication steps are complete.' : '');
     } else {
       cls = 'alert--warn';
       msg = 'Not yet. ';
