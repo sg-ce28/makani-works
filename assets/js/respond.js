@@ -52,8 +52,9 @@
     var msg, cls;
     if (missing === 0 && harmful === 0) {
       cls = 'alert--ok';
+      if (window.KAPU) { KAPU.complete('contain-then-recover', '5'); }
       msg = 'Solid plan. Every foothold the attacker created is closed and nothing in the plan would hurt residents or destroy evidence. ' +
-            'FLAG{contain-then-recover}' + (good < 4 ? ' Consider whether recovery and communication steps are complete.' : '');
+            '' + (good < 4 ? ' Consider whether recovery and communication steps are complete.' : '');
     } else {
       cls = 'alert--warn';
       msg = 'Not yet. ';

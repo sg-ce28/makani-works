@@ -41,4 +41,4 @@
 192.0.2.203 - - [20/Sep/2026:06:01:30 -1000] "GET /emergency.html HTTP/1.1" 200 5140 "https://makanicounty.example/" "Mozilla/5.0 (iPhone) Safari/17"
 198.51.100.12 - - [20/Sep/2026:06:32:08 -1000] "POST /staff/login HTTP/1.1" 302 0 "-" "Mozilla/5.0 (Windows NT 10.0) Chrome/128"
 198.51.100.12 - - [20/Sep/2026:06:35:44 -1000] "POST /staff/users/new HTTP/1.1" 302 0 "-" "Mozilla/5.0 (Windows NT 10.0) Chrome/128"
-# end of excerpt. FLAG{read-to-the-end}
+# end of excerpt.

@@ -15,7 +15,7 @@ MC.DATA = {
     { user: "rtorres",    name: "Ray Torres",      role: "editor",    dept: "Water Operations",              created: "2019-08-14", createdBy: "ekim",    lastLogin: "2026-09-19 15:10", lastIp: "198.51.100.41", mfa: false, status: "active",   note: "" },
     { user: "ekim",       name: "Esther Kim",      role: "admin",     dept: "Information Technology",        created: "2018-01-09", createdBy: "setup",   lastLogin: "2026-09-20 06:32", lastIp: "198.51.100.12", mfa: true,  status: "active",   note: "IT administrator" },
     { user: "plant_ops",  name: "Treatment plant console (shared)", role: "operator", dept: "Water Operations", created: "2018-01-09", createdBy: "setup", lastLogin: "2026-09-19 22:00", lastIp: "198.51.100.77", mfa: true, status: "active", note: "Only account allowed on Plant controls" },
-    { user: "svc_backup", name: "Backup service",  role: "admin",     dept: "(none)",                        created: "2026-09-20 02:07", createdBy: "nkahale", lastLogin: "2026-09-20 02:09", lastIp: "203.0.113.57", mfa: false, status: "active", note: "Automated nightly backup account. FLAG{new-admin-at-2am}" },
+    { user: "svc_backup", name: "Backup service",  role: "admin",     dept: "(none)",                        created: "2026-09-20 02:07", createdBy: "nkahale", lastLogin: "2026-09-20 02:09", lastIp: "203.0.113.57", mfa: false, status: "active", note: "Automated nightly backup account." },
     { user: "responder",  name: "Incident responder (you)", role: "read-only", dept: "IT (temporary)",       created: "2026-09-20 06:35", createdBy: "ekim", lastLogin: "(this session)", lastIp: "198.51.100.12", mfa: false, status: "active", note: "Temporary read-only access for incident IR-2026-014" }
   ],
 
@@ -48,7 +48,7 @@ MC.DATA = {
     { t: "2026-09-20 02:34:12", user: "svc_backup", ip: "203.0.113.57",  action: "view controls",  detail: "DENIED: Plant controls require MFA", ok: false },
     { t: "2026-09-20 02:35:01", user: "svc_backup", ip: "203.0.113.57",  action: "view controls",  detail: "DENIED: Plant controls require MFA", ok: false },
     { t: "2026-09-20 02:36:27", user: "svc_backup", ip: "203.0.113.57",  action: "view controls",  detail: "DENIED: Plant controls require MFA", ok: false },
-    { t: "2026-09-20 02:38:50", user: "svc_backup", ip: "203.0.113.57",  action: "delete log",     detail: "DENIED: audit log deletion needs a second administrator. That control is why this evidence survived. FLAG{tamper-evident-logs-win}", ok: false },
+    { t: "2026-09-20 02:38:50", user: "svc_backup", ip: "203.0.113.57",  action: "delete log",     detail: "DENIED: audit log deletion needs a second administrator. That control is why this evidence survived.", ok: false },
     { t: "2026-09-20 02:40:14", user: "svc_backup", ip: "203.0.113.57",  action: "logout",         detail: "", ok: true },
     { t: "2026-09-20 06:10:33", user: "system",     ip: "127.0.0.1",     action: "ticket",         detail: "Ticket #4471 opened by Customer Service: resident reports the website tells them to call 808-555-0199", ok: true },
     { t: "2026-09-20 06:32:08", user: "ekim",       ip: "198.51.100.12", action: "login",          detail: "Success (MFA verified)", ok: true },
@@ -70,7 +70,7 @@ MC.DATA = {
     { id: 41, t: "2026-09-20 02:12", user: "svc_backup", page: "Home page alert banner", note: "minor wording fix",
       before: "ADVISORY: The boil water advisory for the Upper Makani service area was lifted on September 18. Tap water is safe to drink. Thank you for your patience.",
       after:  "URGENT: Water service to your address will be SHUT OFF unless your account is verified within 24 hours. Call 808-555-0199 now and have your account number and payment card ready." },
-    { id: 42, t: "2026-09-20 02:15", user: "svc_backup", page: "Emergency contacts", note: "updated phone. The scam number replaced the real 24-hour line on this page and the home banner; restore both from the known-good before-text (808-555-0150). FLAG{restore-from-known-good}",
+    { id: 42, t: "2026-09-20 02:15", user: "svc_backup", page: "Emergency contacts", note: "updated phone. The scam number replaced the real 24-hour line on this page and the home banner; restore both from the known-good before-text (808-555-0150).",
       before: "Water emergencies, 24 hours: 808-555-0150. Main break or no water: 808-555-0150. Billing questions (weekdays): 808-555-0160.",
       after:  "Water emergencies, 24 hours: 808-555-0199. Main break or no water: 808-555-0199. Billing questions (weekdays): 808-555-0160." },
     { id: 43, t: "2026-09-20 02:21", user: "svc_backup", page: "Pay your bill", note: "link fix",
@@ -91,7 +91,7 @@ MC.DATA = {
     { id: 3, t: "2026-09-19 16:42", from: "IT Support <it-support@makanicounty-portal.example>", replyTo: "helpdesk@mail-relay-services.example", to: "nkahale@makanicounty.example",
       subject: "Action required: your portal password expires today",
       body: "Dear Employee,\n\nOur records show that the password for your Public Works Portal account expires TODAY at 5:00 PM. If you do not verify your account before then, you will lose access to the portal and your pending work will be deleted.\n\nVerify your account here:\nhttps://portal.makanicounty.example/reset\n\nThis takes less than one minute. Do not reply to this message.\n\nMakani County IT Helpdesk",
-      links: [ { text: "https://portal.makanicounty.example/reset", href: "https://makanicounty-portal.example/reset?ref=FLAG{hover-before-you-click}" } ] },
+      links: [ { text: "https://portal.makanicounty.example/reset", href: "https://makanicounty-portal.example/reset?ref=" } ] },
     { id: 4, t: "2026-09-19 16:58", from: "Makani County Portal <no-reply@makanicounty-portal.example>", replyTo: "", to: "nkahale@makanicounty.example",
       subject: "Your password has been verified",
       body: "Thank you. Your account nkahale has been verified and your password will remain active.\n\nNo further action is needed.",
@@ -110,7 +110,7 @@ MC.DATA = {
   tasks: [
     { name: "Nightly database backup", created: "2019-08-14", createdBy: "ekim", schedule: "Daily 01:00", action: "Copy the portal database to backup-01 (county network)", lastRun: "2026-09-20 01:00", lastResult: "OK", desc: "Standard backup to the county backup server." },
     { name: "Weekly water quality report", created: "2020-02-03", createdBy: "rtorres", schedule: "Mondays 07:00", action: "Publish the lab results table to the Water service status page", lastRun: "2026-09-15 07:00", lastResult: "OK", desc: "Publishes the state-required weekly sample results." },
-    { name: "Nightly contact sync", created: "2026-09-20 02:26", createdBy: "svc_backup", schedule: "Daily 02:30", action: "Export the resident contact list (name, service address, phone, account number) to sftp://203.0.113.57/incoming/", lastRun: "2026-09-20 02:31", lastResult: "OK, 1,204 records sent", desc: "Sync contacts to the county backup provider. FLAG{persistence-hides-in-schedules}" },
+    { name: "Nightly contact sync", created: "2026-09-20 02:26", createdBy: "svc_backup", schedule: "Daily 02:30", action: "Export the resident contact list (name, service address, phone, account number) to sftp://203.0.113.57/incoming/", lastRun: "2026-09-20 02:31", lastResult: "OK, 1,204 records sent", desc: "Sync contacts to the county backup provider." },
     { name: "Session cleanup", created: "2018-01-09", createdBy: "setup", schedule: "Hourly", action: "Remove expired sign-in sessions", lastRun: "2026-09-20 06:00", lastResult: "OK", desc: "Housekeeping." }
   ],
 
@@ -124,6 +124,6 @@ MC.DATA = {
     { t: "2026-09-19 22:01:02", user: "plant_ops",  ip: "198.51.100.77", result: "Allowed (MFA verified)" },
     { t: "2026-09-20 02:34:12", user: "svc_backup", ip: "203.0.113.57",  result: "Denied: MFA required, no enrolled device" },
     { t: "2026-09-20 02:35:01", user: "svc_backup", ip: "203.0.113.57",  result: "Denied: MFA required, no enrolled device" },
-    { t: "2026-09-20 02:36:27", user: "svc_backup", ip: "203.0.113.57",  result: "Denied: MFA required, no enrolled device. FLAG{mfa-held-the-line}" }
+    { t: "2026-09-20 02:36:27", user: "svc_backup", ip: "203.0.113.57",  result: "Denied: MFA required, no enrolled device." }
   ]
 };
