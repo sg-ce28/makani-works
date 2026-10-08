@@ -53,7 +53,7 @@ MC.DATA = {
     { t: "2026-09-20 06:10:33", user: "system",     ip: "127.0.0.1",     action: "ticket",         detail: "Ticket #4471 opened by Customer Service: resident reports the website tells them to call 808-555-0199", ok: true },
     { t: "2026-09-20 06:32:08", user: "ekim",       ip: "198.51.100.12", action: "login",          detail: "Success (MFA verified)", ok: true },
     { t: "2026-09-20 06:35:44", user: "ekim",       ip: "198.51.100.12", action: "create account", detail: "responder (role: read-only)", ok: true },
-    { t: "2026-09-20 06:36:20", user: "ekim",       ip: "198.51.100.12", action: "note",           detail: "Incident IR-2026-014 opened. Site left unchanged so evidence is preserved.", ok: true }
+    { t: "2026-09-20 06:36:20", user: "ekim",       ip: "198.51.100.12", action: "note",           detail: "Incident IR-2026-014 opened. Site left unchanged so evidence is preserved. Source infra sits in 203.0.113.0/24; flagged to the county MSSP for attribution (see the dropped implant in verify.html).", ok: true }
   ],
 
   // Content revision history. "before" is the text as it was, "after" is the text after the edit.
@@ -89,6 +89,7 @@ MC.DATA = {
       body: "All,\n\nQuick reminder from IT. We will never send you an email asking you to click a link and enter your password. If your password really is expiring, you will see a message inside the portal after you sign in.\n\nIf you get an email like that, forward it to it-security@makanicounty.example and delete it.\n\nEsther",
       links: [] },
     { id: 3, t: "2026-09-19 16:42", from: "IT Support <it-support@makanicounty-portal.example>", replyTo: "helpdesk@mail-relay-services.example", to: "nkahale@makanicounty.example",
+      headers: "Received: from mx3.mail-relay-services.example ([203.0.113.57]) by mail.makanicounty.example; 20 Sep 2026 10:42:03 +0800\nX-Mailer: PalmDrop-Sender/1.2\nX-Originating-IP: [203.0.113.57]\nMessage-ID: <TSK-IPAC-0918.9f2a@mail-relay-services.example>",
       subject: "Action required: your portal password expires today",
       body: "Dear Employee,\n\nOur records show that the password for your Public Works Portal account expires TODAY at 5:00 PM. If you do not verify your account before then, you will lose access to the portal and your pending work will be deleted.\n\nVerify your account here:\nhttps://portal.makanicounty.example/reset\n\nThis takes less than one minute. Do not reply to this message.\n\nMakani County IT Helpdesk",
       links: [ { text: "https://portal.makanicounty.example/reset", href: "https://makanicounty-portal.example/reset?ref=" } ] },

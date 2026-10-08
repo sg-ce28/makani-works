@@ -42,6 +42,7 @@
         header('From', m.from) + header('Reply-To', m.replyTo) + header('To', m.to) +
         header('Date', m.t + ' HST') + header('Subject', m.subject) +
       '</dl>' +
+      (m.headers ? '<details class="mail__raw"><summary style="cursor:pointer">Raw headers</summary>' + '<pre class="mono" style="white-space:pre-wrap;margin:.4rem 0 0">' + MC.esc(m.headers) + '</pre></details>' : '') +
       '<div class="mail__body">' + MC.esc(m.body) + '</div>' + links;
     view.hidden = false;
     empty.hidden = true;
