@@ -1,6 +1,6 @@
 /* Response plan builder.  MOCK SITE FOR TRAINING.
- * Students pick containment and recovery actions. The page checks the plan against
- * what the evidence supports and produces a summary for the incident report. */
+ * The page checks the selected plan against what the evidence supports and
+ * produces a summary for the incident report. */
 (function () {
   'use strict';
   if (!MC.requireSession('respond.html')) { return; }
